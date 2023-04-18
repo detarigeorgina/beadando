@@ -1,5 +1,5 @@
 def beolvasas(a, m, lm):
-    fw = open("asdd.txt", "w")
+    fr = open("asdd.txt", "r")
     sor =fr.readline()
     while sor != "":
         sor = sor.split()
@@ -7,7 +7,7 @@ def beolvasas(a, m, lm):
         m.append(sor[1])
         lm.append(sor[2])
         sor =fr.readline()
-    fw.close()
+    fr.close()
 
 #kereses
 def megszamolas(a,lm):
