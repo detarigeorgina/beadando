@@ -17,5 +17,5 @@ while len(asd) < 500:
 
 fw = open("asdd.txt", "w")
 for i in range(len(asd)):
-    fw.write(asd[i]+"\n")
+    fw.write(asd[i]+" "+str(magasok[i])+ "\n")
 fw.close()
