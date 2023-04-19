@@ -56,6 +56,8 @@ def menu(a,m,l):
     if be == "y":
         os.system('cls')
         menu(a,m,l)
+    else:
+        os.system('cls')
 
 def main():
     micsudi = input("Mit nyissunk meg?(Kiterjesztéssel add meg): ")
