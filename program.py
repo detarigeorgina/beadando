@@ -19,18 +19,15 @@ def kivalogatas(a,lm):
     return(lab40)
 
 def picike(a,l):
-    picurka = []
-    for i in range(len(l)):
-        if l[i] == min(l):
-            picurka.append(a[i])
-    return (picurka)
+    
+    return (min(l))
 
 def menu(a,m,l):
     os.system('cls')
     be = input("Magassághoz írd be: mag |Lábakhoz írd be: labacska |Azonosítókhoz írd be: azon |40-es lábakhoz ird be: uwu |Csepp lábakhoz írd be: icikepicike|")
     if be == "mag":
         os.system('cls')
-        print("Magasságok","\n",*a)
+        print("Magasságok","\n",*m)
         be = ""
     elif be == "labacska":
         os.system('cls')
@@ -44,13 +41,13 @@ def menu(a,m,l):
         os.system('cls')
         print("40-es lábú gengszterek:","\n")
         lista = kivalogatas(a,l)
-        print(lista)
+        print(*lista)
         be = ""
     elif be == "icikepicike":
         os.system('cls')
         print("Pindúr pandúrok:","\n")
-        lista = picike(a,l)
-        print(*lista)
+        kis = picike(a,l)
+        print(kis)
         be = ""
     be = input("Szeretnél e további dolgokat meglesni? y/n|")
     if be == "y":
