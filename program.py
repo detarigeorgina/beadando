@@ -17,28 +17,24 @@ def megszamolas(a,lm):
     for i in range(len(lm)):
         if lm[i] == 40:
             lab40.append(a[i])
-    print(lab40)
-
-#osszegzés
-
-#megszamolas
-
-
+    print(*lab40)
 
 def main():
     azonosito, magassag, labmeret = [], [], []
     beolvasas(azonosito, magassag, labmeret)
-    megszamolas(azonosito, labmeret)
-    print("Azonositok","\n" , *azonosito)
-    be = input("Kövihez nyomd meg: y ")
-    if be == "y":
-        os.system('cls')
-        be = ""
+    be = input("Magassághoz írd be: mag |Lábakhoz írd be: labacska |Azonosítókhoz írd be: azon |40-es lábakhoz ird be: uwu|")
+    if be == "mag":
         print("Magasságok","\n",*magassag)
-        be = input("Kövihez nyomd meg: y ")
-        if be == "y":
-            os.system('cls')
         be = ""
+    elif be == "labacska":
         print("Lábak","\n",*labmeret)
+        be = ""
+    elif be == "azon":
+        print("Azonositok","\n" , *azonosito)
+        be = ""
+    elif be == "uwu":
+        print("40-es lábú gengszterek:","\n")
+        megszamolas(azonosito,labmeret)
+        be = ""
 
 main()
