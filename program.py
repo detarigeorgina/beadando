@@ -1,7 +1,7 @@
 import os
 
-def beolvasas(a, m, lm):
-    fr = open("asdd.txt", "r")
+def beolvasas(a, m, lm,mi):
+    fr = open(mi, "r")
     sor =fr.readline()
     while sor != "":
         sor = sor.split()
@@ -11,30 +11,38 @@ def beolvasas(a, m, lm):
         sor =fr.readline()
     fr.close()
 
-#kereses
 def megszamolas(a,lm):
     lab40 = []
     for i in range(len(lm)):
         if lm[i] == 40:
             lab40.append(a[i])
-    print(*lab40)
+    return(lab40)
 
-def main():
-    azonosito, magassag, labmeret = [], [], []
-    beolvasas(azonosito, magassag, labmeret)
+def menu(a,m,l):
     be = input("Magassághoz írd be: mag |Lábakhoz írd be: labacska |Azonosítókhoz írd be: azon |40-es lábakhoz ird be: uwu|")
     if be == "mag":
-        print("Magasságok","\n",*magassag)
+        print("Magasságok","\n",*a)
         be = ""
     elif be == "labacska":
-        print("Lábak","\n",*labmeret)
+        print("Lábak","\n",*l)
         be = ""
     elif be == "azon":
-        print("Azonositok","\n" , *azonosito)
+        print("Azonositok","\n" , *a)
         be = ""
     elif be == "uwu":
         print("40-es lábú gengszterek:","\n")
-        megszamolas(azonosito,labmeret)
+        lista = megszamolas(a,l)
+        print(lista)
         be = ""
+    be = input("Szeretnél e további dolgokat meglesni? y/n|")
+    if be == "y":
+        menu(a,m,l)
+
+def main():
+    micsudi = input("Mit nyissunk meg?(Kiterjesztéssel add meg): ")
+    azonosito, magassag, labmeret = [], [], []
+    beolvasas(azonosito, magassag, labmeret,micsudi)
+    menu(azonosito,magassag,labmeret)
+
 
 main()
