@@ -1,3 +1,5 @@
+import os
+
 def beolvasas(a, m, lm):
     fr = open("asdd.txt", "r")
     sor =fr.readline()
@@ -26,6 +28,17 @@ def megszamolas(a,lm):
 def main():
     azonosito, magassag, labmeret = [], [], []
     beolvasas(azonosito, magassag, labmeret)
-    print(azonosito,magassag,labmeret)
     megszamolas(azonosito, labmeret)
+    print("Azonositok","\n" , *azonosito)
+    be = input("Kövihez nyomd meg: y ")
+    if be == "y":
+        os.system('cls')
+        be = ""
+        print("Magasságok","\n",*magassag)
+        be = input("Kövihez nyomd meg: y ")
+        if be == "y":
+            os.system('cls')
+        be = ""
+        print("Lábak","\n",*labmeret)
+
 main()
