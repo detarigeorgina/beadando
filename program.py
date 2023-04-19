@@ -11,7 +11,7 @@ def beolvasas(a, m, lm,mi):
         sor =fr.readline()
     fr.close()
 
-def megszamolas(a,lm):
+def kivalogatas(a,lm):
     lab40 = []
     for i in range(len(lm)):
         if lm[i] == 40:
@@ -31,7 +31,7 @@ def menu(a,m,l):
         be = ""
     elif be == "uwu":
         print("40-es lábú gengszterek:","\n")
-        lista = megszamolas(a,l)
+        lista = kivalogatas(a,l)
         print(lista)
         be = ""
     be = input("Szeretnél e további dolgokat meglesni? y/n|")
