@@ -18,13 +18,20 @@ def kivalogatas(a,lm):
             lab40.append(a[i])
     return(lab40)
 
-def picike(a,l):
-    
+def picike(l):
     return (min(l))
+
+def valamilab(l:list,s=40):
+    if s in l:
+        return "Itt a kedvenc lábad, van itt az adatok közt ilyen lábikójú ember!"
+    return "így jártál, nincs az adatok közt ilyen fura láb"
+    
+
+
 
 def menu(a,m,l):
     os.system('cls')
-    be = input("Magassághoz írd be: mag |Lábakhoz írd be: labacska |Azonosítókhoz írd be: azon |40-es lábakhoz ird be: uwu |Csepp lábakhoz írd be: icikepicike|")
+    be = input("Magassághoz írd be: mag |Lábakhoz írd be: labacska |Azonosítókhoz írd be: azon |40-es lábakhoz ird be: uwu |Csepp lábakhoz írd be: icikepicike|Különbejáratuú láb választásához írd be: enmondom|")
     if be == "mag":
         os.system('cls')
         print("Magasságok","\n",*m)
@@ -48,6 +55,15 @@ def menu(a,m,l):
         print("Pindúr pandúrok:","\n")
         kis = picike(a,l)
         print(kis)
+        be = ""
+    elif be == "enmondom":
+        os.system('cls')
+        no = input("Akarsz e speckó lábacskát megadni? y/n")
+        if no == "y":
+            zsa = int(input("Mekkora láb a kedvenced?"))
+            valamilab(l,zsa)
+        else:
+            valamilab(l)
         be = ""
     be = input("Szeretnél e további dolgokat meglesni? y/n|")
     if be == "y":
