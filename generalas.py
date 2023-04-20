@@ -11,7 +11,7 @@ while len(asd) < 500:
 
     azonosito = ""
     for i in range(10):
-        
+   
         azonosito += chr(randint(65, 90))
     if azonosito not in asd:
         asd.append(azonosito)
