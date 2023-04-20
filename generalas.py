@@ -17,7 +17,7 @@ while len(asd) < 500:
         asd.append(azonosito)
     pass
 
-fw = open("asdd.txt", "w")
-for i in range(len(asd)):
+fw = open("be.txt", "w")
+for i in range(20):
     fw.write(asd[i]+" "+str(magasok[i])+" "+  str(lm[i]) + "\n")
 fw.close()

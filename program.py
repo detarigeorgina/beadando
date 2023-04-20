@@ -62,5 +62,4 @@ def main():
     beolvasas(azonosito, magassag, labmeret,micsudi)
     menu(azonosito,magassag,labmeret)
 
-
 main()
