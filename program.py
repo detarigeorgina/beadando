@@ -51,7 +51,7 @@ def menu(a,m,l):
     elif be == "icikepicike":
         os.system('cls')
         print("Pindúr pandúrok:","\n")
-        kis = picike(a,l)
+        kis = picike(l)
         print(kis)
         be = ""
     elif be == "enmondom":
