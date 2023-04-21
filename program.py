@@ -23,9 +23,18 @@ def picike(l):
 
 def valamilab(l:list,s=21):
     if s in l:
+<<<<<<< HEAD
         print("itt a kedvenc láb az adatok közt!")
     else:
         print("Nincs ily furcsa lábacska az adataim közt:(")
+=======
+        print("Itt a kedvenc lábad, van itt az adatok közt ilyen lábikójú ember!")
+    else: 
+        print("így jártál, nincs az adatok közt ilyen fura láb")
+    
+
+
+>>>>>>> efecf061917550884adc7843a0cdf86447a8ea22
 
 def menu(a,m,l):
     os.system('cls')
@@ -56,7 +65,7 @@ def menu(a,m,l):
         be = ""
     elif be == "enmondom":
         os.system('cls')
-        no = input("Akarsz e speckó lábacskát megadni? y/n")
+        no = input("Akarsz e speckó lábacskát megadni? y/n: ")
         if no == "y":
             zsa = int(input("Mekkorka láb a kedvenced?: "))
             valamilab(l,zsa)
@@ -65,7 +74,7 @@ def menu(a,m,l):
             valamilab(l)
 
         be = ""
-    be = input("Szeretnél e további dolgokat meglesni? y/n|")
+    be = input("Szeretnél e további dolgokat meglesni? y/n: ")
     if be == "y":
         os.system('cls')
         menu(a,m,l)
