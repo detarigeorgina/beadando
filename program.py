@@ -54,6 +54,7 @@ def menu(a,m,l):
         kis = picike(l)
         print(kis)
         be = ""
+
     elif be == "enmondom":
         os.system('cls')
         no = input("Akarsz e speckó lábacskát megadni? y/n: ")
