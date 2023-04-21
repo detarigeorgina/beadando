@@ -29,7 +29,8 @@ def valamilab(l:list,s=21):
 
 def menu(a,m,l):
     os.system('cls')
-    be = input("Magassághoz írd be: mag |Lábakhoz írd be: labacska |Azonosítókhoz írd be: azon |40-es lábakhoz ird be: uwu |Csepp lábakhoz írd be: icikepicike|Különbejáratuú láb választásához írd be: enmondom|")
+    print("Magassághoz írd be: mag \nLábakhoz írd be: labacska \nAzonosítókhoz írd be: azon \n40-es lábakhoz ird be: uwu \nCsepp lábakhoz írd be: icikepicike\nKülönbejáratuú láb választásához írd be: enmondom")
+    be = input()
     if be == "mag":
         os.system('cls')
         print("Magasságok","\n",*m)
