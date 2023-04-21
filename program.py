@@ -21,13 +21,11 @@ def kivalogatas(a,lm):
 def picike(l):
     return (min(l))
 
-def valamilab(l:list,s=40):
+def valamilab(l:list,s=21):
     if s in l:
-        return "Itt a kedvenc lábad, van itt az adatok közt ilyen lábikójú ember!"
-    return "így jártál, nincs az adatok közt ilyen fura láb"
-    
-
-
+        print("itt a kedvenc láb az adatok közt!")
+    else:
+        print("Nincs ily furcsa lábacska az adataim közt:(")
 
 def menu(a,m,l):
     os.system('cls')
@@ -60,10 +58,12 @@ def menu(a,m,l):
         os.system('cls')
         no = input("Akarsz e speckó lábacskát megadni? y/n")
         if no == "y":
-            zsa = int(input("Mekkora láb a kedvenced?"))
+            zsa = int(input("Mekkorka láb a kedvenced?: "))
             valamilab(l,zsa)
         else:
+            print("Választottunk helyetted egy 21-es lábat, most lessük meg benne van e az adataimban!","\n")
             valamilab(l)
+
         be = ""
     be = input("Szeretnél e további dolgokat meglesni? y/n|")
     if be == "y":
